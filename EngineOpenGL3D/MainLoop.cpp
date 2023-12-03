@@ -8,7 +8,7 @@ void MainLoop::Run()
 
 	WindowHandler window1, w2;
 	window1.Make_window();
-	w2.Make_window(300, 300, "sperma");
+	w2.Make_window(300, 300, "chuj");
 
 	
 	while (!glfwWindowShouldClose(window1.window))
