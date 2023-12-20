@@ -1,0 +1,16 @@
+﻿  glad.c
+  LibrariesHandler.cpp
+  main.cpp
+  MainLoop.cpp
+  WindowHandler.cpp
+  Generowanie kodu...
+LibrariesHandler.obj : error LNK2019: nierozpoznany symbol zewnętrzny _glfwInit przywołany w funkcji "public: static void __cdecl Libraries::InitAll(void)" (?InitAll@Libraries@@SAXXZ)
+LibrariesHandler.obj : error LNK2019: nierozpoznany symbol zewnętrzny _glfwTerminate przywołany w funkcji "public: static void __cdecl Libraries::InitAll(void)" (?InitAll@Libraries@@SAXXZ)
+LibrariesHandler.obj : error LNK2019: nierozpoznany symbol zewnętrzny _glfwWindowHint przywołany w funkcji "public: static void __cdecl Libraries::InitAll(void)" (?InitAll@Libraries@@SAXXZ)
+MainLoop.obj : error LNK2019: nierozpoznany symbol zewnętrzny _glfwWindowShouldClose przywołany w funkcji "public: static void __cdecl MainLoop::Run(void)" (?Run@MainLoop@@SAXXZ)
+MainLoop.obj : error LNK2019: nierozpoznany symbol zewnętrzny _glfwPollEvents przywołany w funkcji "public: static void __cdecl MainLoop::Run(void)" (?Run@MainLoop@@SAXXZ)
+WindowHandler.obj : error LNK2019: nierozpoznany symbol zewnętrzny _glfwCreateWindow przywołany w funkcji "public: struct GLFWwindow * __thiscall WindowHandler::Make_window(int,int,char const * const)" (?Make_window@WindowHandler@@QAEPAUGLFWwindow@@HHQBD@Z)
+WindowHandler.obj : error LNK2019: nierozpoznany symbol zewnętrzny _glfwDestroyWindow przywołany w funkcji "public: void __thiscall WindowHandler::Destroy_window(void)" (?Destroy_window@WindowHandler@@QAEXXZ)
+WindowHandler.obj : error LNK2019: nierozpoznany symbol zewnętrzny _glfwMakeContextCurrent przywołany w funkcji "public: struct GLFWwindow * __thiscall WindowHandler::Make_window(int,int,char const * const)" (?Make_window@WindowHandler@@QAEPAUGLFWwindow@@HHQBD@Z)
+C:\Users\Seweryn\Desktop\StudiaS3\GrafikaKomputerowa\Projekt3D\OpenGL3D\EngineOpenGL3D\Libraries\lib\glfw3.lib : warning LNK4272: wystąpił konflikt typu maszyny biblioteki „x64” z typem maszyny docelowej „x86”
+C:\Users\Seweryn\Desktop\StudiaS3\GrafikaKomputerowa\Projekt3D\OpenGL3D\EngineOpenGL3D\Debug\EngineOpenGL3D.exe : fatal error LNK1120: liczba nierozpoznanych elementów zewnętrznych: 8

@@ -71,12 +71,12 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <IncludePath>C:\Users\damia\Desktop\OpenGL3D\EngineOpenGL3D\Libraries\include;C:\Users\Seweryn\Desktop\StudiaS3\GrafikaKomputerowa\Projekt3D\OpenGL3D\EngineOpenGL3D\Libraries\include;$(IncludePath)</IncludePath>
-    <LibraryPath>C:\Users\damia\Desktop\OpenGL3D\EngineOpenGL3D\Libraries\lib;C:\Users\Seweryn\Desktop\StudiaS3\GrafikaKomputerowa\Projekt3D\OpenGL3D\EngineOpenGL3D\Libraries\lib;$(LibraryPath)</LibraryPath>
+    <IncludePath>C:\Users\Seweryn\Desktop\StudiaS3\GrafikaKomputerowa\Projekt3D\OpenGL3D\EngineOpenGL3D\Libraries\include;$(IncludePath);C:\Users\damia\Desktop\OpenGL3D\EngineOpenGL3D\Libraries\include</IncludePath>
+    <LibraryPath>C:\Users\Seweryn\Desktop\StudiaS3\GrafikaKomputerowa\Projekt3D\OpenGL3D\EngineOpenGL3D\Libraries\lib;$(LibraryPath);C:\Users\damia\Desktop\OpenGL3D\EngineOpenGL3D\Libraries\lib</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <IncludePath>C:\Users\damia\Desktop\OpenGL3D\EngineOpenGL3D\Libraries\include;C:\Users\Seweryn\Desktop\StudiaS3\GrafikaKomputerowa\Projekt3D\OpenGL3D\EngineOpenGL3D\Libraries\include;$(IncludePath)</IncludePath>
-    <LibraryPath>C:\Users\damia\Desktop\OpenGL3D\EngineOpenGL3D\Libraries\lib;C:\Users\Seweryn\Desktop\StudiaS3\GrafikaKomputerowa\Projekt3D\OpenGL3D\EngineOpenGL3D\Libraries\lib;$(LibraryPath)</LibraryPath>
+    <IncludePath>C:\Users\Seweryn\Desktop\StudiaS3\GrafikaKomputerowa\Projekt3D\OpenGL3D\EngineOpenGL3D\Libraries\include;$(IncludePath);C:\Users\damia\Desktop\OpenGL3D\EngineOpenGL3D\Libraries\include</IncludePath>
+    <LibraryPath>C:\Users\Seweryn\Desktop\StudiaS3\GrafikaKomputerowa\Projekt3D\OpenGL3D\EngineOpenGL3D\Libraries\lib;$(LibraryPath);C:\Users\damia\Desktop\OpenGL3D\EngineOpenGL3D\Libraries\lib</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>

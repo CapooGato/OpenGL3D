@@ -7,6 +7,7 @@
 class Libraries
 {
 public:
-	static void InitAll();
+	static void InitGLFW();
+	static void InitGlad();
 	static void TerminateAll();
 };

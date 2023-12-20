@@ -15,6 +15,8 @@ const char WINDOW_NAME[50] = "3D Engine";
 class WindowHandler
 {
 public:
+	GLsizei width;
+	GLsizei height;
 	GLFWwindow* window = nullptr; // Øeby nie by≥o wiszπcego wskaünika
 
 	GLFWwindow* Make_window(); 

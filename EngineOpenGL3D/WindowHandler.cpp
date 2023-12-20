@@ -11,7 +11,8 @@ GLFWwindow* WindowHandler::Make_window()
 		return nullptr;
 	}
 	else {
-		glfwMakeContextCurrent(this->window);
+		this->width = WINDOW_WIDTH;
+		this->height = WINDOW_HEIGHT;
 		return this->window;
 	}
 }
@@ -19,7 +20,7 @@ GLFWwindow* WindowHandler::Make_window()
 GLFWwindow* WindowHandler::Make_window(int width, int height, const char winName[50])
 {
 	this->window = glfwCreateWindow(width, height, winName, nullptr, nullptr);
-
+	
 	if (window == nullptr)
 	{
 		std::cout << "\nBlad tworzenia okna\n";
@@ -27,7 +28,8 @@ GLFWwindow* WindowHandler::Make_window(int width, int height, const char winName
 		return nullptr;
 	}
 	else {
-		glfwMakeContextCurrent(this->window);
+		this->width = width;
+		this->height = height;
 		return this->window;
 	}
 }
