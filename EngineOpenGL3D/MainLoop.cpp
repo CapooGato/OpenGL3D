@@ -1,8 +1,10 @@
 #include "MainLoop.h"
 #include "LibrariesHandler.h"
 #include "WindowHandler.h"
+#include "Cube.cpp"
 #include<glad/glad.h>
 #include<GLFW/glfw3.h>
+
 void MainLoop::Run()
 {
 	Libraries::InitGLFW();
@@ -21,12 +23,18 @@ void MainLoop::Run()
 	// kolor malowania tla
 	glClearColor(0.07f, 0.13f, 0.17f, 1.0f);
 	// czyszczenie koloru
-	glClear(GL_COLOR_BUFFER_BIT);
+	//glClear(GL_COLOR_BUFFER_BIT);  
+	// 
 	// swapowanie buforow kolorw
 	glfwSwapBuffers(window1.window);
+	std::cout << "alla";
+	Szescian szescianApp;	
 
 	while (!glfwWindowShouldClose(window1.window))
 	{
+		szescianApp.run();
+		
+		glClear(GL_COLOR_BUFFER_BIT);
 		glfwPollEvents();
 
 	}
