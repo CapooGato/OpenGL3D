@@ -23,8 +23,8 @@ public:
         }
     }
 
-private:
     GLFWwindow* window;
+private:
     GLuint vertexArrayID;
     GLuint vertexBuffer;
     GLuint programID;
