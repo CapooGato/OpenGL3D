@@ -137,6 +137,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="CameraControl.cpp" />
     <ClCompile Include="Cube.cpp" />
     <ClCompile Include="glad.c" />
     <ClCompile Include="LibrariesHandler.cpp" />
@@ -145,6 +146,7 @@
     <ClCompile Include="WindowHandler.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="CameraControl.h" />
     <ClInclude Include="LibrariesHandler.h" />
     <ClInclude Include="MainLoop.h" />
     <ClInclude Include="WindowHandler.h" />

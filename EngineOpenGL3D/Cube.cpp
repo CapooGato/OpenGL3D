@@ -3,12 +3,22 @@
 #include <glm/glm.hpp>
 #include <glm/gtc/matrix_transform.hpp>
 #include <iostream>
+static const GLuint g_element_buffer_data[] = {
+        0, 1, 2, 2, 1, 3,   // Pierwsza œciana (przód)
+        4, 5, 6, 6, 5, 7,   // Druga œciana (ty³)
+        8, 9, 10, 10, 9, 11, // Trzecia œciana (lewa)
+        12, 13, 14, 14, 13, 15, // Czwarta œciana (prawa)
+        16, 17, 18, 18, 17, 19, // Pi¹ta œciana (dolna)
+        20, 21, 22, 22, 21, 23  // Szósta œciana (górna)
+};
+
 
 class Szescian {
 public:
     Szescian() {
         initOpenGL();
         initGeometry();
+      
     }
 
     ~Szescian() {
@@ -99,14 +109,7 @@ private:
                  1.0f,  1.0f,  1.0f   // Wierzcho³ek 23
         };
 
-        static const GLuint g_element_buffer_data[] = {
-            0, 1, 2, 2, 1, 3,   // Pierwsza œciana (przód)
-            4, 5, 6, 6, 5, 7,   // Druga œciana (ty³)
-            8, 9, 10, 10, 9, 11, // Trzecia œciana (lewa)
-            12, 13, 14, 14, 13, 15, // Czwarta œciana (prawa)
-            16, 17, 18, 18, 17, 19, // Pi¹ta œciana (dolna)
-            20, 21, 22, 22, 21, 23  // Szósta œciana (górna)
-        };
+      
 
         glGenVertexArrays(1, &vertexArrayID);
         glBindVertexArray(vertexArrayID);
