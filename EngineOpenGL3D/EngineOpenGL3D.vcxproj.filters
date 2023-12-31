@@ -33,9 +33,6 @@
     <ClCompile Include="Cube.cpp">
       <Filter>Pliki źródłowe</Filter>
     </ClCompile>
-    <ClCompile Include="CameraControl.cpp">
-      <Filter>Pliki źródłowe</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="LibrariesHandler.h">
@@ -47,8 +44,13 @@
     <ClInclude Include="WindowHandler.h">
       <Filter>Pliki nagłówkowe</Filter>
     </ClInclude>
-    <ClInclude Include="CameraControl.h">
-      <Filter>Pliki nagłówkowe</Filter>
-    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="vertexShader.glsl">
+      <Filter>Pliki źródłowe</Filter>
+    </None>
+    <None Include="fragmentShader.glsl">
+      <Filter>Pliki źródłowe</Filter>
+    </None>
   </ItemGroup>
 </Project>
