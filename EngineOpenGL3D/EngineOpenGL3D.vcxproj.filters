@@ -16,6 +16,9 @@
     <Filter Include="Pliki zasobów\Shaders">
       <UniqueIdentifier>{bfb4b318-b4f4-4f9d-b515-45dc8b9163de}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Pliki zasobów\Textures">
+      <UniqueIdentifier>{73eec611-dc8d-4edd-856e-57e17c44ef02}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -51,6 +54,12 @@
     <ClCompile Include="Cubelmao.cpp">
       <Filter>Pliki źródłowe</Filter>
     </ClCompile>
+    <ClCompile Include="stb.cpp">
+      <Filter>Pliki źródłowe</Filter>
+    </ClCompile>
+    <ClCompile Include="Texture.cpp">
+      <Filter>Pliki źródłowe</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="LibrariesHandler.h">
@@ -71,6 +80,12 @@
     <ClInclude Include="VAO.h">
       <Filter>Pliki nagłówkowe</Filter>
     </ClInclude>
+    <ClInclude Include="Texture.h">
+      <Filter>Pliki nagłówkowe</Filter>
+    </ClInclude>
+    <ClInclude Include="Libraries\include\stb\stb_image.h">
+      <Filter>Pliki nagłówkowe</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="default.vert">
@@ -85,5 +100,10 @@
     <None Include="vertexShader.glsl">
       <Filter>Pliki zasobów\Shaders</Filter>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="floppa.jpg">
+      <Filter>Pliki zasobów\Textures</Filter>
+    </Image>
   </ItemGroup>
 </Project>

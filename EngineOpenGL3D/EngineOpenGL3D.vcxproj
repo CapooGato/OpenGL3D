@@ -145,6 +145,8 @@
     <ClCompile Include="LibrariesHandler.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="ShaderClass.cpp" />
+    <ClCompile Include="stb.cpp" />
+    <ClCompile Include="Texture.cpp" />
     <ClCompile Include="VAO.cpp" />
     <ClCompile Include="VBO.cpp" />
     <ClCompile Include="WindowHandler.cpp" />
@@ -152,7 +154,9 @@
   <ItemGroup>
     <ClInclude Include="EBO.h" />
     <ClInclude Include="LibrariesHandler.h" />
+    <ClInclude Include="Libraries\include\stb\stb_image.h" />
     <ClInclude Include="ShaderClass.h" />
+    <ClInclude Include="Texture.h" />
     <ClInclude Include="VAO.h" />
     <ClInclude Include="VBO.h" />
     <ClInclude Include="WindowHandler.h" />
@@ -162,6 +166,9 @@
     <None Include="default.vert" />
     <None Include="fragmentShader.glsl" />
     <None Include="vertexShader.glsl" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="floppa.jpg" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
