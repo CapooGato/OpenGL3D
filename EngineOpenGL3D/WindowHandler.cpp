@@ -6,13 +6,15 @@ GLFWwindow* WindowHandler::Make_window()
 
 	if (window == nullptr)
 	{
-		std::cout << "\nBlad tworzenia okna\n";
+		std::cout << "\Erorr when making window\n";
 		Libraries::TerminateAll();
 		return nullptr;
 	}
 	else {
 		this->width = WINDOW_WIDTH;
 		this->height = WINDOW_HEIGHT;
+
+		std::cout << "\nWindow made succesfully\n";
 		return this->window;
 	}
 }
@@ -23,13 +25,15 @@ GLFWwindow* WindowHandler::Make_window(int width, int height, const char winName
 	
 	if (window == nullptr)
 	{
-		std::cout << "\nBlad tworzenia okna\n";
+		std::cout << "\Erorr when making window\n";
 		Libraries::TerminateAll();
 		return nullptr;
 	}
 	else {
 		this->width = width;
 		this->height = height;
+
+		std::cout << "\nWindow made succesfully\n";
 		return this->window;
 	}
 }
@@ -37,4 +41,5 @@ GLFWwindow* WindowHandler::Make_window(int width, int height, const char winName
 void WindowHandler::Destroy_window()
 {
 	glfwDestroyWindow(this->window);
+	std::cout << "\nWindow destroyed\n";
 }

@@ -3,11 +3,11 @@
 void Libraries::InitGLFW(){
 
 	if (!glfwInit()) {
-		std::cerr << "\nBlad ladowania glfw\n";
+		std::cerr << "\nError loading glfw\n";
 		glfwTerminate();
 		return;
 	}else
-		std::cout << "\nPomyslnie zaladowano glfw\n";
+		std::cout << "\nSuccesfully loaded glfw\n";
 
 	glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
 	glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
@@ -17,11 +17,11 @@ void Libraries::InitGLFW(){
 void Libraries::InitGlad(){
 
 	if (!gladLoadGL()) {
-		std::cerr << "\nBlad ladowania glad\n";
+		std::cerr << "\nError loading glad\n";
 		glfwTerminate();
 		return;
 	}else 
-		std::cout << "\nPomyslnie zaladowano glad\n";
+		std::cout << "\nSuccesfully loaded glad\n";
 }
 
 void Libraries::TerminateAll() {

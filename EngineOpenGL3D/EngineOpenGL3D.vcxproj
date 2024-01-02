@@ -75,8 +75,8 @@
     <LibraryPath>C:\Users\Seweryn\Desktop\StudiaS3\GrafikaKomputerowa\Projekt3D\OpenGL3D\EngineOpenGL3D\Libraries\lib;$(LibraryPath);C:\Users\damia\Desktop\OpenGL3D\EngineOpenGL3D\Libraries\lib</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <IncludePath>C:\Users\Seweryn\Desktop\StudiaS3\GrafikaKomputerowa\Projekt3D\OpenGL3D\EngineOpenGL3D\Libraries\include;$(IncludePath);C:\Users\damia\Desktop\OpenGL3D\EngineOpenGL3D\Libraries\include</IncludePath>
-    <LibraryPath>C:\Users\Seweryn\Desktop\StudiaS3\GrafikaKomputerowa\Projekt3D\OpenGL3D\EngineOpenGL3D\Libraries\lib;$(LibraryPath);C:\Users\damia\Desktop\OpenGL3D\EngineOpenGL3D\Libraries\lib</LibraryPath>
+    <IncludePath>C:\Users\kawkr\OneDrive\Pulpit\StudiaS3\Grafika\OpenGL3D\EngineOpenGL3D\Libraries\include;C:\Users\Seweryn\Desktop\StudiaS3\GrafikaKomputerowa\Projekt3D\OpenGL3D\EngineOpenGL3D\Libraries\include;$(IncludePath);C:\Users\damia\Desktop\OpenGL3D\EngineOpenGL3D\Libraries\include</IncludePath>
+    <LibraryPath>C:\Users\kawkr\OneDrive\Pulpit\StudiaS3\Grafika\OpenGL3D\EngineOpenGL3D\Libraries\lib;C:\Users\Seweryn\Desktop\StudiaS3\GrafikaKomputerowa\Projekt3D\OpenGL3D\EngineOpenGL3D\Libraries\lib;$(LibraryPath);C:\Users\damia\Desktop\OpenGL3D\EngineOpenGL3D\Libraries\lib</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -138,18 +138,28 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Cube.cpp" />
+    <ClCompile Include="Cubelmao.cpp" />
+    <ClCompile Include="Cubelmao.h" />
+    <ClCompile Include="EBO.cpp" />
     <ClCompile Include="glad.c" />
     <ClCompile Include="LibrariesHandler.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="MainLoop.cpp" />
+    <ClCompile Include="ShaderClass.cpp" />
+    <ClCompile Include="VAO.cpp" />
+    <ClCompile Include="VBO.cpp" />
     <ClCompile Include="WindowHandler.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="EBO.h" />
     <ClInclude Include="LibrariesHandler.h" />
-    <ClInclude Include="MainLoop.h" />
+    <ClInclude Include="ShaderClass.h" />
+    <ClInclude Include="VAO.h" />
+    <ClInclude Include="VBO.h" />
     <ClInclude Include="WindowHandler.h" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="default.frag" />
+    <None Include="default.vert" />
     <None Include="fragmentShader.glsl" />
     <None Include="vertexShader.glsl" />
   </ItemGroup>

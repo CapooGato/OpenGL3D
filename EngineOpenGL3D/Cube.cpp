@@ -235,7 +235,9 @@ private:
 
     GLuint loadShaders() {
         std::string vertexShaderCode = readShaderCode("vertexShader.glsl");
+      //  std::string vertexShaderCode = readShaderCode("vertexShader.glsl");
         std::string fragmentShaderCode = readShaderCode("fragmentShader.glsl");
+      //  std::string fragmentShaderCode = readShaderCode("fragmentShader.glsl");
 
         const char* vertexShaderSource = vertexShaderCode.c_str();
         const char* fragmentShaderSource = fragmentShaderCode.c_str();
