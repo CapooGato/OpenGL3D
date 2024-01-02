@@ -137,6 +137,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Camera.cpp" />
     <ClCompile Include="Cube.cpp" />
     <ClCompile Include="Cubelmao.cpp" />
     <ClCompile Include="Cubelmao.h" />
@@ -152,9 +153,9 @@
     <ClCompile Include="WindowHandler.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Camera.h" />
     <ClInclude Include="EBO.h" />
     <ClInclude Include="LibrariesHandler.h" />
-    <ClInclude Include="Libraries\include\stb\stb_image.h" />
     <ClInclude Include="ShaderClass.h" />
     <ClInclude Include="Texture.h" />
     <ClInclude Include="VAO.h" />
@@ -164,8 +165,6 @@
   <ItemGroup>
     <None Include="default.frag" />
     <None Include="default.vert" />
-    <None Include="fragmentShader.glsl" />
-    <None Include="vertexShader.glsl" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="floppa.jpg" />

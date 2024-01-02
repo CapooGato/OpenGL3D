@@ -54,10 +54,13 @@
     <ClCompile Include="Cubelmao.cpp">
       <Filter>Pliki źródłowe</Filter>
     </ClCompile>
+    <ClCompile Include="Texture.cpp">
+      <Filter>Pliki źródłowe</Filter>
+    </ClCompile>
     <ClCompile Include="stb.cpp">
       <Filter>Pliki źródłowe</Filter>
     </ClCompile>
-    <ClCompile Include="Texture.cpp">
+    <ClCompile Include="Camera.cpp">
       <Filter>Pliki źródłowe</Filter>
     </ClCompile>
   </ItemGroup>
@@ -83,7 +86,7 @@
     <ClInclude Include="Texture.h">
       <Filter>Pliki nagłówkowe</Filter>
     </ClInclude>
-    <ClInclude Include="Libraries\include\stb\stb_image.h">
+    <ClInclude Include="Camera.h">
       <Filter>Pliki nagłówkowe</Filter>
     </ClInclude>
   </ItemGroup>
@@ -92,12 +95,6 @@
       <Filter>Pliki zasobów\Shaders</Filter>
     </None>
     <None Include="default.frag">
-      <Filter>Pliki zasobów\Shaders</Filter>
-    </None>
-    <None Include="fragmentShader.glsl">
-      <Filter>Pliki zasobów\Shaders</Filter>
-    </None>
-    <None Include="vertexShader.glsl">
       <Filter>Pliki zasobów\Shaders</Filter>
     </None>
   </ItemGroup>
