@@ -163,8 +163,10 @@
     <ClInclude Include="WindowHandler.h" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="default.frag" />
-    <None Include="default.vert" />
+    <None Include="light.frag" />
+    <None Include="light.vert" />
+    <None Include="pyramid.frag" />
+    <None Include="pyramid.vert" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="floppa.jpg" />

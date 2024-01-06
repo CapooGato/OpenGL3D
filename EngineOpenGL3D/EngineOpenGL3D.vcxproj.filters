@@ -91,10 +91,16 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <None Include="default.vert">
+    <None Include="pyramid.vert">
       <Filter>Pliki zasobów\Shaders</Filter>
     </None>
-    <None Include="default.frag">
+    <None Include="pyramid.frag">
+      <Filter>Pliki zasobów\Shaders</Filter>
+    </None>
+    <None Include="light.vert">
+      <Filter>Pliki zasobów\Shaders</Filter>
+    </None>
+    <None Include="light.frag">
       <Filter>Pliki zasobów\Shaders</Filter>
     </None>
   </ItemGroup>
