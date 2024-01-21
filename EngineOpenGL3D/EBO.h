@@ -1,8 +1,9 @@
 #pragma once
 
 #include<glad/glad.h>
+#include "AbstractArrayObject.h"
 
-class EBO
+class EBO : protected AbstractArrayObject
 {
 public:
 	// ID reference of Elements Buffer Object
@@ -11,9 +12,9 @@ public:
 	EBO(GLuint* indices, GLsizeiptr size);
 
 	// Binds the EBO
-	void Bind();
+	void Bind() const override;
 	// Unbinds the EBO
-	void Unbind();
+	void Unbind() const override;
 	// Deletes the EBO
-	void Delete();
+	void Delete() const override;
 };

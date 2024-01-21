@@ -63,6 +63,12 @@
     <ClCompile Include="Camera.cpp">
       <Filter>Pliki źródłowe</Filter>
     </ClCompile>
+    <ClCompile Include="AbstractArrayObject.h">
+      <Filter>Pliki nagłówkowe</Filter>
+    </ClCompile>
+    <ClCompile Include="Cone.cpp">
+      <Filter>Pliki źródłowe</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="LibrariesHandler.h">
@@ -89,6 +95,9 @@
     <ClInclude Include="Camera.h">
       <Filter>Pliki nagłówkowe</Filter>
     </ClInclude>
+    <ClInclude Include="Cone.h">
+      <Filter>Pliki nagłówkowe</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="pyramid.vert">
@@ -101,6 +110,12 @@
       <Filter>Pliki zasobów\Shaders</Filter>
     </None>
     <None Include="light.frag">
+      <Filter>Pliki zasobów\Shaders</Filter>
+    </None>
+    <None Include="Cone.vert">
+      <Filter>Pliki zasobów\Shaders</Filter>
+    </None>
+    <None Include="Cone.frag">
       <Filter>Pliki zasobów\Shaders</Filter>
     </None>
   </ItemGroup>

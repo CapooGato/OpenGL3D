@@ -1,8 +1,9 @@
 #pragma once
 
 #include<glad/glad.h>
+#include "AbstractArrayObject.h"
 
-class VBO
+class VBO : protected AbstractArrayObject
 {
 public:
 	// Reference ID of the Vertex Buffer Object
@@ -11,9 +12,9 @@ public:
 	VBO(GLfloat* vertices, GLsizeiptr size);
 
 	// Binds the VBO
-	void Bind();
+	void Bind() const override;
 	// Unbinds the VBO
-	void Unbind();
+	void Unbind() const override;
 	// Deletes the VBO
-	void Delete();
+	void Delete() const override;
 };
