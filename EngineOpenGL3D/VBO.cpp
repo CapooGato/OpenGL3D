@@ -9,19 +9,19 @@ VBO::VBO(GLfloat* vertices, GLsizeiptr size)
 }
 
 // Binds the VBO
-void VBO::Bind()
+void VBO::Bind() const
 {
 	glBindBuffer(GL_ARRAY_BUFFER, ID);
 }
 
 // Unbinds the VBO
-void VBO::Unbind()
+void VBO::Unbind() const
 {
 	glBindBuffer(GL_ARRAY_BUFFER, 0);
 }
 
 // Deletes the VBO
-void VBO::Delete()
+void VBO::Delete() const
 {
 	glDeleteBuffers(1, &ID);
 }

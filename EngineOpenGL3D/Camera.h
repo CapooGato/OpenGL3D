@@ -37,6 +37,7 @@ public:
 	void updateMatrix(float FOVdeg, float nearPlane, float farPlane);
 	// Exports the camera matrix to a shader
 	void Matrix(Shader& shader, const char* uniform);
+	void Inputs(GLFWwindow* window, int& framerate);
 	// Handles camera inputs
-	void Inputs(GLFWwindow* window);
+
 };

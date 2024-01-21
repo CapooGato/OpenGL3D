@@ -3,8 +3,9 @@
 
 #include<glad/glad.h>
 #include"VBO.h"
+#include "AbstractArrayObject.h"
 
-class VAO
+class VAO : protected AbstractArrayObject
 {
 public:
 	// ID reference for the Vertex Array Object
@@ -15,11 +16,11 @@ public:
 	// Links a VBO Attribute such as a position or color to the VAO
 	void LinkAttrib(VBO& VBO, GLuint layout, GLuint numComponents, GLenum type, GLsizeiptr stride, void* offset);
 	// Binds the VAO
-	void Bind();
+	void Bind() const override;
 	// Unbinds the VAO
-	void Unbind();
+	void Unbind() const override;
 	// Deletes the VAO
-	void Delete();
+	void Delete() const override;
 };
 
 #endif

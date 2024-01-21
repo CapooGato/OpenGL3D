@@ -2,10 +2,11 @@
 #include "WindowHandler.h"
 #include "Texture.h"
 #include "Camera.h"
-#include"VAO.h"
-#include"VBO.h"
-#include"EBO.h"
-#include"shaderClass.h"
+#include "VAO.h"
+#include "VBO.h"
+#include "EBO.h"
+#include "shaderClass.h"
+#include "Cone.h"
 
 
 #include<glm/glm.hpp>
@@ -85,8 +86,9 @@ GLuint lightIndices[] =
 };
 
 
+
+
 int main(void){
-	
 	// Libraries and window stuff;
 	Libraries::InitGLFW();
 	
@@ -143,7 +145,6 @@ int main(void){
 
 
 
-
 	glm::vec4 lightColor = glm::vec4(1.0f, 1.0f, 1.0f, 1.0f);
 	glm::vec3 lightPos = glm::vec3(0.5f, 0.5f, 0.5f);
 	glm::mat4 lightModel = glm::mat4(1.0f);
@@ -171,9 +172,11 @@ int main(void){
 	glEnable(GL_DEPTH_TEST);  // Makes 3d without bugs
 
 
-
 	// Creates camera object last one is position of the camera
 	Camera camera(mainWindow.width, mainWindow.height, glm::vec3(0.0f, 0.0f, 2.0f));
+
+	int framerate = 1;
+
 
 	while (!glfwWindowShouldClose(mainWindow.window)) {
 
@@ -182,16 +185,15 @@ int main(void){
 
 		// Clean the back buffer and assign the new color to it
 		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-		glfwSwapInterval(1);
 	
 		
 		// Tell OpenGL which Shader Program we want to use
 		shaderProgram.Activate();
 		glUniform3f(glGetUniformLocation(shaderProgram.ID, "camPos"), camera.Position.x, camera.Position.y, camera.Position.z);
-		
 
 		// Handles camera inputs
-		camera.Inputs(mainWindow.window);
+		camera.Inputs(mainWindow.window, framerate);
+		glfwSwapInterval(framerate);
 		// Updates and exports the camera matrix to the Vertex Shader
 		camera.updateMatrix(45.0f, 0.1f, 100.0f);
 		camera.Matrix(shaderProgram, "camMatrix");
@@ -202,6 +204,7 @@ int main(void){
 		floppa.Bind();
 		// Bind the VAO so OpenGL knows to use it
 		VAO1.Bind();
+		
 		// Draw primitives, number of indices, datatype of indices, index of indices
 		glDrawElements(GL_TRIANGLES, sizeof(indices) / sizeof(int), GL_UNSIGNED_INT, 0);
 
@@ -216,9 +219,11 @@ int main(void){
 		camera.Matrix(lightShader, "camMatrix");
 		// Bind the VAO so OpenGL knows to use it
 		lightVAO.Bind();
+
 		// Draw primitives, number of indices, datatype of indices, index of indices
 		glDrawElements(GL_TRIANGLES, sizeof(lightIndices) / sizeof(int), GL_UNSIGNED_INT, 0);
 
+		
 
 		glfwSwapBuffers(mainWindow.window);
 
