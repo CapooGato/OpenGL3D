@@ -77,6 +77,7 @@ void Camera::Inputs(GLFWwindow* window, int& framerate)
 	if (glfwGetKey(window, GLFW_KEY_F) == GLFW_RELEASE) {
 		framerate = 1;
 	}
+	
 	else if (glfwGetKey(window, GLFW_KEY_LEFT_SHIFT) == GLFW_RELEASE)
 	{
 		speed = 0.1f;

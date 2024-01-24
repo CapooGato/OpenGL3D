@@ -69,6 +69,7 @@ GLfloat lightVertices[] =
 	 0.1f,  0.1f,  0.1f
 };
 
+
 GLuint lightIndices[] =
 {
 	0, 1, 2,
@@ -89,6 +90,10 @@ GLuint lightIndices[] =
 
 
 int main(void){
+
+	float lightScale = 1.0f;
+	int scaleDirection = 1;
+
 	// Libraries and window stuff;
 	Libraries::InitGLFW();
 	
@@ -186,7 +191,7 @@ int main(void){
 		// Clean the back buffer and assign the new color to it
 		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 	
-		
+
 		// Tell OpenGL which Shader Program we want to use
 		shaderProgram.Activate();
 		glUniform3f(glGetUniformLocation(shaderProgram.ID, "camPos"), camera.Position.x, camera.Position.y, camera.Position.z);
@@ -204,7 +209,10 @@ int main(void){
 		floppa.Bind();
 		// Bind the VAO so OpenGL knows to use it
 		VAO1.Bind();
+
 		
+		
+
 		// Draw primitives, number of indices, datatype of indices, index of indices
 		glDrawElements(GL_TRIANGLES, sizeof(indices) / sizeof(int), GL_UNSIGNED_INT, 0);
 
@@ -219,6 +227,31 @@ int main(void){
 		camera.Matrix(lightShader, "camMatrix");
 		// Bind the VAO so OpenGL knows to use it
 		lightVAO.Bind();
+
+
+		// Animacja zmiany skali œwiat³a
+		lightScale += 0.001f * scaleDirection;
+
+		// Je¿eli osi¹gniêto pewn¹ wartoœæ, zmieñ kierunek zmiany
+		if (lightScale >= 1.1f || lightScale <= 0.5f) {
+			scaleDirection *= -1;
+		}
+		else
+		{
+			scaleDirection *= -1;
+		}
+
+		// Skaluj œwiat³o
+		for (int i = 0; i < sizeof(lightVertices) / sizeof(lightVertices[0]); i += 3) {
+			lightVertices[i] *= lightScale;
+			lightVertices[i + 1] *= lightScale;
+			lightVertices[i + 2] *= lightScale;
+		}
+
+		// Zaktualizuj bufor wierzcho³ków
+		glBindBuffer(GL_ARRAY_BUFFER, lightVBO.ID);
+		glBufferSubData(GL_ARRAY_BUFFER, 0, sizeof(lightVertices), lightVertices);
+		glBindBuffer(GL_ARRAY_BUFFER, 0);
 
 		// Draw primitives, number of indices, datatype of indices, index of indices
 		glDrawElements(GL_TRIANGLES, sizeof(lightIndices) / sizeof(int), GL_UNSIGNED_INT, 0);
